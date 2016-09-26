@@ -1846,19 +1846,19 @@ static void writeFATSV()
         if (altGNSSValid && abs(a->altitude_gnss - a->fatsv_emitted_altitude_gnss) >= 50) {
             changed = 1;
         }
-        if (headingValid && abs(a->heading - a->fatsv_emitted_heading) >= 2) {
+        if (headingValid && abs((int)a->heading - a->fatsv_emitted_heading) >= 2) {
             changed = 1;
         }
-        if (headingMagValid && abs(a->heading_magnetic - a->fatsv_emitted_heading_magnetic) >= 2) {
+        if (headingMagValid && abs((int)a->heading_magnetic - a->fatsv_emitted_heading_magnetic) >= 2) {
             changed = 1;
         }
-        if (speedValid && abs(a->speed - a->fatsv_emitted_speed) >= 25) {
+        if (speedValid && abs((int)a->speed - a->fatsv_emitted_speed) >= 25) {
             changed = 1;
         }
-        if (speedIASValid && abs(a->speed_ias - a->fatsv_emitted_speed_ias) >= 25) {
+        if (speedIASValid && abs((int)a->speed_ias - a->fatsv_emitted_speed_ias) >= 25) {
             changed = 1;
         }
-        if (speedTASValid && abs(a->speed_tas - a->fatsv_emitted_speed_tas) >= 25) {
+        if (speedTASValid && abs((int)a->speed_tas - a->fatsv_emitted_speed_tas) >= 25) {
             changed = 1;
         }
 
